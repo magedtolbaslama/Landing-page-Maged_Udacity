@@ -35,25 +35,23 @@ Features
    
 code has beed added to app.js :
 
-// create Global variable (scts ) for document sections to add sections automatically to navigation bar
-const scts = document.querySelectorAll('section');
-// create Global variable (upgo ) to scroll the document to top part when click the Top button
-const upgo = document.getElementById('topScroll');
-/* create Global variable (freg ) to append document elements instead of adding elements
-   to document directly so we can avoid reflow and repaint */
-const frag = document.createDocumentFragment();
-// create Global variable (myul ) to add unordered list automatically to the document
-const myul = document.querySelector('ul');
+create Global variable (scts ) for document sections to
+add sections automatically to navigation bar
+ document.querySelectorAll('section')
+ 
+ create Global variable (upgo ) to scroll the document to
+ top part when click the Top button
+ document.getElementById('topScroll')
+ 
+ create Global variable (freg ) to append document elements instead of adding elements
+   to document directly so we can avoid reflow and repaint 
+ document.createDocumentFragment()
 
+create Global variable (myul ) to add unordered list automatically to the document
+ document.querySelector('ul');
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-//build dynamically the navigation bar
-scts.forEach(section => {
+build dynamically the navigation bar
+forEach(section => {
 // Get section id then store it in section_id variable
     const section_id = section.getAttribute('id');
 //Get section data-nav then store it in data_nav variable
@@ -67,7 +65,7 @@ scts.forEach(section => {
 // create link as href from section id in my_link variable
     my_link.setAttribute('href',section_id);
 
-// add addEventListener  to the link in navigation bar to scroll into view when we click the link
+ add addEventListener  to the link in navigation bar to scroll into view when we click the link
     my_link.addEventListener('click', e => {
         e.preventDefault();
         section.scrollIntoView({behavior : "smooth"})
