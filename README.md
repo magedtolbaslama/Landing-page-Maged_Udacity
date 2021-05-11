@@ -3,7 +3,7 @@ MY first landing page project for Udacity web professional Project Submission
 
 
 About project
-Architecture:The project  has a structure like the one shown below. 
+Architecture:The project structure is shown below. 
 css
 - styles.css    
 index.html
