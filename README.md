@@ -41,7 +41,7 @@ add sections automatically to navigation bar
  
  create Global variable (upgo ) to scroll the document to
  top part when click the Top button
- document.getElementById('topScroll')
+ document.getElementById('topbutton')
  
  create Global variable (freg ) to append document elements instead of adding elements
    to document directly so we can avoid reflow and repaint 
@@ -128,7 +128,7 @@ Go scrolling up to the beginning of document
              upgo.style.display = 'none';
         }else {
 
-             goTop.style.display ='block';
+             upgo.style.display ='block';
            }
         }
     })
